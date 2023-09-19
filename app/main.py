@@ -2,10 +2,13 @@ from fastapi import FastAPI
 from pydantic import BaseModel, validator
 import joblib
 import pandas as pd
+from app.utils.multicolle import MultiColumnLabelEncoder
 
-pipe = joblib.load('../pipelines/xgb_pipeline.pkl')
 
 app = FastAPI()
+
+
+pipe = joblib.load('app/pipelines/xgb_pipeline.pkl')
 
 
 class PredictionInput(BaseModel):
@@ -51,4 +54,4 @@ def predict(data: PredictionInput):
     }])
 
     prediction_result = pipe.predict(input_data)
-    return {'prediction': prediction_result}
+    return {'prediction': prediction_result.tolist()}
