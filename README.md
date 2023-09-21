@@ -51,6 +51,7 @@ It's important to note that the Stroke Prediction model has **limitations**:
 
 The model's performance may be affected by the imbalance in the dataset. It is more likely to classify individuals as not at risk of stroke due to the dataset's class distribution.
 The model's predictions should not be considered a definitive diagnosis. They are intended for informational purposes only.
+Furthermore, know that Streamlit's deployment to the Streamlit community cloud is by no means perfect and liable to bugs causing it to repeatedly predict the same outcome.
 
 Feedback and Contributions
 Contributions and feedback are welcome. If you would like to contribute to the improvement of the model or the app, please feel free to do so.
