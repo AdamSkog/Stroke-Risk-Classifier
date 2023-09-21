@@ -11,7 +11,6 @@ mock_data = {
     "Heart_disease": 1,
     "Avg_glucose_level": 85.0,
     "Bmi": 28.5,
-    "Stroke": 0,
     "Sex": "Male",
     "Marriage_status": "Married",
     "Employment": "Employed",
